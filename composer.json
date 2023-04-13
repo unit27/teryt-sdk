@@ -3,6 +3,7 @@
     "type": "library",
     "description": "The SDK for GUS TERYT API",
     "keywords": ["gus", "teryt", "terc", "simc", "ulic"],
+    "license": "MIT",
     "require": {
         "php": ">=7.4",
         "ext-soap": "*",
