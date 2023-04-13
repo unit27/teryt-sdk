@@ -1,0 +1,25 @@
+{
+    "name": "goosfraba/teryt-sdk",
+    "type": "library",
+    "description": "The SDK for GUS TERYT API",
+    "keywords": ["gus", "teryt", "terc", "simc", "ulic"],
+    "require": {
+        "php": ">=7.4",
+        "ext-soap": "*",
+        "webit/soap-api": "^3.0",
+        "wsdltophp/wssecurity": "^2.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^10.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Goosfraba\\Teryt\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Goosfraba\\Teryt\\": "tests/"
+        }
+    }
+}
