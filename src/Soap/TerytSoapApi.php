@@ -205,4 +205,61 @@ final class TerytSoapApi implements TerytApi
     {
         return $this->executor->executeSoapFunction(TerytSoapFunctions::POBIERZ_DATE_AKTUALNGO_KAT_ULIC);
     }
+
+    /**
+     * @inheritDoc
+     */
+    public function PobierzListeWojewodztw(\DateTimeInterface $stateAt = null): array
+    {
+        return $this->executor->executeSoapFunction(TerytSoapFunctions::POBIERZ_LISTE_WOJEWODZTW, $this->dateArgument($stateAt));
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function PobierzListePowiatow(string $voivodeship, \DateTimeInterface $stateAt = null): array
+    {
+        return $this->executor->executeSoapFunction(
+            TerytSoapFunctions::POBIERZ_LISTE_POWIATOW,
+            [
+                [
+                    'Woj' => $voivodeship,
+                    'DataStanu' => ($stateAt ?? date_create_immutable())->format('Y-m-d')
+                ]
+            ]
+        );
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function PobierzListeGmin(string $voivodeship, string $county, \DateTimeInterface $stateAt = null): array
+    {
+        return $this->executor->executeSoapFunction(
+            TerytSoapFunctions::POBIERZ_LISTE_GMIN,
+            [
+                [
+                    'Woj' => $voivodeship,
+                    'Pow' => $county,
+                    'DataStanu' => ($stateAt ?? date_create_immutable())->format('Y-m-d')
+                ]
+            ]
+        );
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function PobierzGminyiPowDlaWoj(string $voivodeship, \DateTimeInterface $stateAt = null): array
+    {
+        return $this->executor->executeSoapFunction(
+            TerytSoapFunctions::POBIERZ_GMINY_I_POW_DLA_WOJ,
+            [
+                [
+                    'Woj' => $voivodeship,
+                    'DataStanu' => ($stateAt ?? date_create_immutable())->format('Y-m-d')
+                ]
+            ]
+        );
+    }
 }

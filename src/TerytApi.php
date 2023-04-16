@@ -32,6 +32,37 @@ interface TerytApi
      */
     public function PobierzDateAktualnegoKatUlic(): \DateTimeInterface;
 
+    /**
+     * List the voivodeships
+     *
+     * @param \DateTimeInterface|null $stateAt
+     * @return TercUnit[]
+     */
+    public function PobierzListeWojewodztw(\DateTimeInterface $stateAt = null): array;
+
+    /**
+     * Lists the counties of given voivodship
+     *
+     * @param string $voivodeship
+     * @param \DateTimeInterface|null $stateAt
+     * @return TercUnit[]
+     */
+    public function PobierzListePowiatow(string $voivodeship, \DateTimeInterface $stateAt = null): array;
+
+    /**
+     * Lists the communes of given county
+     *
+     * @param string $voivodeship
+     * @param string $county
+     * @param \DateTimeInterface|null $stateAt
+     * @return TercUnit[]
+     */
+    public function PobierzListeGmin(string $voivodeship, string $county, \DateTimeInterface $stateAt = null): array;
+
+    /**
+     * Lists the counties and communes of given voivodeship
+     */
+    public function PobierzGminyiPowDlaWoj(string $voivodeship, \DateTimeInterface $stateAt = null): array;
 
     /**
      * Checks if user can be authenticated

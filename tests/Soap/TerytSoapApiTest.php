@@ -4,6 +4,7 @@ namespace Goosfraba\Teryt\Soap;
 
 use Goosfraba\Teryt\EnumItem;
 use Goosfraba\Teryt\SIMCType;
+use Goosfraba\Teryt\TercUnit;
 use PHPUnit\Framework\TestCase;
 
 class TerytSoapApiTest extends TestCase
@@ -137,6 +138,34 @@ class TerytSoapApiTest extends TestCase
     {
         $date = $this->api->PobierzDateAktualnegoKatUlic();
         $this->assertNotEmpty($date);
+    }
+
+    public function testPobierzListeWojewodztw(): void
+    {
+        $units = $this->api->PobierzListeWojewodztw();
+        $this->assertNotEmpty($units);
+        $this->assertContainsOnlyInstancesOf(TercUnit::class, $units);
+    }
+
+    public function testPobierzListePowiatow(): void
+    {
+        $units = $this->api->PobierzListePowiatow("02");
+        $this->assertNotEmpty($units);
+        $this->assertContainsOnlyInstancesOf(TercUnit::class, $units);
+    }
+
+    public function testPobierzListeGmin(): void
+    {
+        $units = $this->api->PobierzListeGmin("02", "01");
+        $this->assertNotEmpty($units);
+        $this->assertContainsOnlyInstancesOf(TercUnit::class, $units);
+    }
+
+    public function testPobierzGminyiPowDlaWoj(): void
+    {
+        $units = $this->api->PobierzGminyiPowDlaWoj("02");
+        $this->assertNotEmpty($units);
+        $this->assertContainsOnlyInstancesOf(TercUnit::class, $units);
     }
 
     private function dsn(): Dsn

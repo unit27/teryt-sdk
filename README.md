@@ -48,6 +48,10 @@ For know the SDK supports the following functions:
  * PobierzDateAktualnegoKatNTS
  * PobierzDateAktualnegoKatSimc
  * PobierzDateAktualnegoKatUlic
+ * PobierzListeWojewodztw
+ * PobierzListePowiatow
+ * PobierzListeGmin
+ * PobierzGminyiPowDlaWoj
  * PobierzKatalogTERC
  * PobierzKatalogTERCAdr
  * PobierzKatalogNTS
