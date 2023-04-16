@@ -5,6 +5,35 @@ namespace Goosfraba\Teryt;
 interface TerytApi
 {
     /**
+     * Checks the date of TERC catalogue
+     *
+     * @return \DateTimeInterface
+     */
+    public function PobierzDateAktualnegoKatTerc(): \DateTimeInterface;
+
+    /**
+     * Checks the date of NTS catalogue
+     *
+     * @return \DateTimeInterface
+     */
+    public function PobierzDateAktualnegoKatNTS():  \DateTimeInterface;
+
+    /**
+     * Checks the date of SIMC catalogue
+     *
+     * @return \DateTimeInterface
+     */
+    public function PobierzDateAktualnegoKatSimc(): \DateTimeInterface;
+
+    /**
+     * Checks the date of ULIC catalogue
+     *
+     * @return \DateTimeInterface
+     */
+    public function PobierzDateAktualnegoKatUlic(): \DateTimeInterface;
+
+
+    /**
      * Checks if user can be authenticated
      *
      * @return bool

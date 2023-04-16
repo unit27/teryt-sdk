@@ -173,4 +173,36 @@ final class TerytSoapApi implements TerytApi
             ]
         ];
     }
+
+    /**
+     * @inheritDoc
+     */
+    public function PobierzDateAktualnegoKatTerc(): \DateTimeInterface
+    {
+        return $this->executor->executeSoapFunction(TerytSoapFunctions::POBIERZ_DATE_AKTUALNGO_KAT_TERC);
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function PobierzDateAktualnegoKatNTS(): \DateTimeInterface
+    {
+        return $this->executor->executeSoapFunction(TerytSoapFunctions::POBIERZ_DATE_AKTUALNGO_KAT_NTS);
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function PobierzDateAktualnegoKatSimc(): \DateTimeInterface
+    {
+        return $this->executor->executeSoapFunction(TerytSoapFunctions::POBIERZ_DATE_AKTUALNGO_KAT_SIMC);
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function PobierzDateAktualnegoKatUlic(): \DateTimeInterface
+    {
+        return $this->executor->executeSoapFunction(TerytSoapFunctions::POBIERZ_DATE_AKTUALNGO_KAT_ULIC);
+    }
 }

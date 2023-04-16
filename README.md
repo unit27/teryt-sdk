@@ -44,6 +44,10 @@ $fileObject = $catalogFile->dump(); // Dumps the catalogue content into a file \
 For know the SDK supports the following functions:
 
  * CzyZalogowany
+ * PobierzDateAktualnegoKatTerc
+ * PobierzDateAktualnegoKatNTS
+ * PobierzDateAktualnegoKatSimc
+ * PobierzDateAktualnegoKatUlic
  * PobierzKatalogTERC
  * PobierzKatalogTERCAdr
  * PobierzKatalogNTS

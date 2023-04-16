@@ -115,6 +115,30 @@ class TerytSoapApiTest extends TestCase
         );
     }
 
+    public function testPobierzDateAktualnegoKatTerc(): void
+    {
+        $date = $this->api->PobierzDateAktualnegoKatTerc();
+        $this->assertNotEmpty($date);
+    }
+
+    public function testPobierzDateAktualnegoKatNTS(): void
+    {
+        $date = $this->api->PobierzDateAktualnegoKatNTS();
+        $this->assertNotEmpty($date);
+    }
+
+    public function testPobierzDateAktualnegoKatSIMC(): void
+    {
+        $date = $this->api->PobierzDateAktualnegoKatSimc();
+        $this->assertNotEmpty($date);
+    }
+
+    public function testPobierzDateAktualnegoKatULIC(): void
+    {
+        $date = $this->api->PobierzDateAktualnegoKatUlic();
+        $this->assertNotEmpty($date);
+    }
+
     private function dsn(): Dsn
     {
         $dsn = getenv("GUS_TERYT_DSN");

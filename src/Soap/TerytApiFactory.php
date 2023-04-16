@@ -4,6 +4,7 @@ namespace Goosfraba\Teryt\Soap;
 
 use Goosfraba\Teryt\Soap\Executor\ActionAddingExecutor;
 use Goosfraba\Teryt\Soap\Hydrator\CatalogFileHydrator;
+use Goosfraba\Teryt\Soap\Hydrator\DateHydrator;
 use Goosfraba\Teryt\Soap\Hydrator\EnumItemHydrator;
 use Goosfraba\Teryt\Soap\Hydrator\SIMCTypeHydrator;
 use Webit\SoapApi\Executor\SoapApiExecutorBuilder;
@@ -36,7 +37,9 @@ final class TerytApiFactory
                 array_merge(
                     $this->catalogFileHydrators(),
                     $this->enumObjectHydrators(),
-                    [TerytSoapFunctions::POBIERZ_SLOWNIK_RODZAJOW_SIMC => new SIMCTypeHydrator()]
+                    $this->dateHydrators(),
+                    [TerytSoapFunctions::POBIERZ_SLOWNIK_RODZAJOW_SIMC => new SIMCTypeHydrator()],
+
                 )
             )
         );
@@ -75,6 +78,21 @@ final class TerytApiFactory
         return array_combine(
             $methods,
             array_fill(0, count($methods), new CatalogFileHydrator())
+        );
+    }
+
+    private function dateHydrators(): array
+    {
+        $methods = [
+            TerytSoapFunctions::POBIERZ_DATE_AKTUALNGO_KAT_TERC,
+            TerytSoapFunctions::POBIERZ_DATE_AKTUALNGO_KAT_NTS,
+            TerytSoapFunctions::POBIERZ_DATE_AKTUALNGO_KAT_SIMC,
+            TerytSoapFunctions::POBIERZ_DATE_AKTUALNGO_KAT_ULIC,
+        ];
+
+        return array_combine(
+            $methods,
+            array_fill(0, count($methods), new DateHydrator())
         );
     }
 }
