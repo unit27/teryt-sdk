@@ -4,10 +4,10 @@ namespace Goosfraba\Teryt\Soap;
 
 use Goosfraba\Teryt\Soap\Executor\ActionAddingExecutor;
 use Goosfraba\Teryt\Soap\Hydrator\CatalogFileHydrator;
-use Goosfraba\Teryt\Soap\Hydrator\DateHydrator;
 use Goosfraba\Teryt\Soap\Hydrator\EnumItemHydrator;
+use Goosfraba\Teryt\Soap\Hydrator\PlacesHydrator;
 use Goosfraba\Teryt\Soap\Hydrator\SIMCTypeHydrator;
-use Goosfraba\Teryt\Soap\Hydrator\TercUnitHydrator;
+use Goosfraba\Teryt\Soap\Hydrator\StreetsHydrator;
 use Webit\SoapApi\Executor\SoapApiExecutorBuilder;
 use Webit\SoapApi\Hydrator\FrontHydrator;
 use WsdlToPhp\WsSecurity\WsSecurity;
@@ -38,9 +38,9 @@ final class TerytApiFactory
                 array_merge(
                     $this->catalogFileHydrators(),
                     $this->enumObjectHydrators(),
-                    $this->dateHydrators(),
-                    $this->tercUnitHydrators(),
                     [TerytSoapFunctions::POBIERZ_SLOWNIK_RODZAJOW_SIMC => new SIMCTypeHydrator()],
+                    [TerytSoapFunctions::WYSZUKAJ_MIEJSCOWOSC => new PlacesHydrator()],
+                    [TerytSoapFunctions::WYSZUKAJ_ULICE => new StreetsHydrator()]
                 )
             )
         );
@@ -79,36 +79,6 @@ final class TerytApiFactory
         return array_combine(
             $methods,
             array_fill(0, count($methods), new CatalogFileHydrator())
-        );
-    }
-
-    private function dateHydrators(): array
-    {
-        $methods = [
-            TerytSoapFunctions::POBIERZ_DATE_AKTUALNGO_KAT_TERC,
-            TerytSoapFunctions::POBIERZ_DATE_AKTUALNGO_KAT_NTS,
-            TerytSoapFunctions::POBIERZ_DATE_AKTUALNGO_KAT_SIMC,
-            TerytSoapFunctions::POBIERZ_DATE_AKTUALNGO_KAT_ULIC,
-        ];
-
-        return array_combine(
-            $methods,
-            array_fill(0, count($methods), new DateHydrator())
-        );
-    }
-
-    private function tercUnitHydrators(): array
-    {
-        $methods = [
-            TerytSoapFunctions::POBIERZ_LISTE_WOJEWODZTW,
-            TerytSoapFunctions::POBIERZ_LISTE_POWIATOW,
-            TerytSoapFunctions::POBIERZ_LISTE_GMIN,
-            TerytSoapFunctions::POBIERZ_GMINY_I_POW_DLA_WOJ
-        ];
-
-        return array_combine(
-            $methods,
-            array_fill(0, count($methods), new TercUnitHydrator())
         );
     }
 }

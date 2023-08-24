@@ -5,7 +5,7 @@ The library provides a wrapper for GUS TERYT SOAP API.
 
 Recommended way of installation is via **composer**
 ```bash
-composer require goosfraba/teryt-sdk
+composer require unit27/teryt-sdk
 ```
 
 ## Usage
@@ -65,5 +65,7 @@ For know the SDK supports the following functions:
  * PobierzSlownikRodzajowJednostek
  * PobierzSlownikCechULIC
  * PobierzSlownikRodzajowSIMC
+ * WyszukajMiejscowosc
+ * WyszukajUlice
 
-Feel free to contrubute and add support for more functions.
+Feel free to contribute and add support for more functions.

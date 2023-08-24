@@ -1,5 +1,5 @@
 {
-    "name": "goosfraba/teryt-sdk",
+    "name": "unit27/teryt-sdk",
     "type": "library",
     "description": "The SDK for GUS TERYT API",
     "keywords": ["gus", "teryt", "terc", "simc", "ulic"],

@@ -18,14 +18,8 @@ final class TerytSoapFunctions
     public const POBIERZ_SLOWNIK_RODZAJOW_JEDNOSTEK = "PobierzSlownikRodzajowJednostek";
     public const POBIERZ_SLOWNIK_CECH_ULIC = "PobierzSlownikCechULIC";
     public const POBIERZ_SLOWNIK_RODZAJOW_SIMC = "PobierzSlownikRodzajowSIMC";
-    public const POBIERZ_DATE_AKTUALNGO_KAT_TERC = "PobierzDateAktualnegoKatTerc";
-    public const POBIERZ_DATE_AKTUALNGO_KAT_NTS = "PobierzDateAktualnegoKatNTS";
-    public const POBIERZ_DATE_AKTUALNGO_KAT_SIMC = "PobierzDateAktualnegoKatSimc";
-    public const POBIERZ_DATE_AKTUALNGO_KAT_ULIC = "PobierzDateAktualnegoKatUlic";
-    public const POBIERZ_LISTE_WOJEWODZTW = "PobierzListeWojewodztw";
-    public const POBIERZ_LISTE_POWIATOW = "PobierzListePowiatow";
-    public const POBIERZ_LISTE_GMIN = "PobierzListeGmin";
-    public const POBIERZ_GMINY_I_POW_DLA_WOJ = "PobierzGminyiPowDlaWoj";
+    public const WYSZUKAJ_MIEJSCOWOSC = "WyszukajMiejscowosc";
+    public const WYSZUKAJ_ULICE = "WyszukajUlice";
 
     private function __construct()
     {
