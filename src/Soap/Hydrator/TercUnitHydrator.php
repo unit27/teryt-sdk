@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 namespace Goosfraba\Teryt\Soap\Hydrator;
 
@@ -11,7 +11,7 @@ final class TercUnitHydrator implements Hydrator
     /**
      * @inheritDoc
      */
-    public function hydrateResult($result, $soapFunction)
+    public function hydrateResult($result, $soapFunction): array
     {
         $resultKey = $soapFunction."Result";
         if (!@$result->{$resultKey}) {

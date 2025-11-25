@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 namespace Goosfraba\Teryt;
 
@@ -39,7 +39,7 @@ interface TerytApi
      * @param \DateTimeInterface|null $stateAt
      * @return CatalogFile
      */
-    public function PobierzKatalogTERC(\DateTimeInterface $stateAt = null): CatalogFile;
+    public function PobierzKatalogTERC(?\DateTimeInterface $stateAt = null): CatalogFile;
 
     /**
      * Gets the ZIP file of TERYT TERC catalogue in address version
@@ -47,7 +47,7 @@ interface TerytApi
      * @param \DateTimeInterface|null $stateAt
      * @return CatalogFile
      */
-    public function PobierzKatalogTERCAdr(\DateTimeInterface $stateAt = null): CatalogFile;
+    public function PobierzKatalogTERCAdr(?\DateTimeInterface $stateAt = null): CatalogFile;
 
     /**
      * Gets the ZIP file of TERYT NTS catalogue
@@ -55,7 +55,7 @@ interface TerytApi
      * @param \DateTimeInterface|null $stateAt
      * @return CatalogFile
      */
-    public function PobierzKatalogNTS(\DateTimeInterface $stateAt = null): CatalogFile;
+    public function PobierzKatalogNTS(?\DateTimeInterface $stateAt = null): CatalogFile;
 
     /**
      * Gets the ZIP file of TERYT SIMC catalogue in address version
@@ -63,7 +63,7 @@ interface TerytApi
      * @param \DateTimeInterface|null $stateAt
      * @return CatalogFile
      */
-    public function PobierzKatalogSIMCAdr(\DateTimeInterface $stateAt = null): CatalogFile;
+    public function PobierzKatalogSIMCAdr(?\DateTimeInterface $stateAt = null): CatalogFile;
 
     /**
      * Gets the ZIP file of TERYT SIMC catalogue in address version
@@ -71,7 +71,7 @@ interface TerytApi
      * @param \DateTimeInterface|null $stateAt
      * @return CatalogFile
      */
-    public function PobierzKatalogSIMC(\DateTimeInterface $stateAt = null): CatalogFile;
+    public function PobierzKatalogSIMC(?\DateTimeInterface $stateAt = null): CatalogFile;
 
     /**
      * Gets the ZIP file of TERYT SIMC Stat catalogue
@@ -79,7 +79,7 @@ interface TerytApi
      * @param \DateTimeInterface|null $stateAt
      * @return CatalogFile
      */
-    public function PobierzKatalogSIMCStat(\DateTimeInterface $stateAt = null): CatalogFile;
+    public function PobierzKatalogSIMCStat(?\DateTimeInterface $stateAt = null): CatalogFile;
 
     /**
      * Gets the ZIP file of TERYT ULIC catalogue in
@@ -87,7 +87,7 @@ interface TerytApi
      * @param \DateTimeInterface|null $stateAt
      * @return CatalogFile
      */
-    public function PobierzKatalogULIC(\DateTimeInterface $stateAt = null): CatalogFile;
+    public function PobierzKatalogULIC(?\DateTimeInterface $stateAt = null): CatalogFile;
 
     /**
      * Gets the ZIP file of TERYT ULIC catalogue in address version
@@ -95,7 +95,7 @@ interface TerytApi
      * @param \DateTimeInterface|null $stateAt
      * @return CatalogFile
      */
-    public function PobierzKatalogULICAdr(\DateTimeInterface $stateAt = null): CatalogFile;
+    public function PobierzKatalogULICAdr(?\DateTimeInterface $stateAt = null): CatalogFile;
 
     /**
      * Gets the ZIP file of TERYT ULIC catalogue in "no borough" version
@@ -103,7 +103,7 @@ interface TerytApi
      * @param \DateTimeInterface|null $stateAt
      * @return CatalogFile
      */
-    public function PobierzKatalogULICBezDzielnic(\DateTimeInterface $stateAt = null): CatalogFile;
+    public function PobierzKatalogULICBezDzielnic(?\DateTimeInterface $stateAt = null): CatalogFile;
 
     /**
      * Gets the ZIP file of TERYT WMRODZ catalogue
@@ -111,5 +111,5 @@ interface TerytApi
      * @param \DateTimeInterface|null $stateAt
      * @return CatalogFile
      */
-    public function PobierzKatalogWMRODZ(\DateTimeInterface $stateAt = null): CatalogFile;
+    public function PobierzKatalogWMRODZ(?\DateTimeInterface $stateAt = null): CatalogFile;
 }

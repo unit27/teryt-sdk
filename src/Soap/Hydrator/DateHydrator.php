@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 namespace Goosfraba\Teryt\Soap\Hydrator;
 
@@ -10,7 +10,7 @@ final class DateHydrator implements Hydrator
     /**
      * @inheritDoc
      */
-    public function hydrateResult($result, $soapFunction)
+    public function hydrateResult($result, $soapFunction): \DateTimeImmutable|false
     {
         $resultKey = $soapFunction . "Result";
         $date = $result->{$resultKey};

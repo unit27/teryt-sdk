@@ -1,12 +1,12 @@
-<?php
+<?php declare(strict_types=1);
 
 namespace Goosfraba\Teryt\Soap;
 
 final class Dsn
 {
-    private const SCHEME = "gus+teryt";
-    private const ENV_PROD = "prod";
-    private const ENV_TEST = "test";
+    private const string SCHEME = "gus+teryt";
+    private const string ENV_PROD = "prod";
+    private const string ENV_TEST = "test";
 
     private string $env;
     private string $user;

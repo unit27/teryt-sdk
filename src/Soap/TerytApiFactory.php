@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 namespace Goosfraba\Teryt\Soap;
 
@@ -14,8 +14,8 @@ use WsdlToPhp\WsSecurity\WsSecurity;
 
 final class TerytApiFactory
 {
-    private const WSDL_PROD = "https://uslugaterytws1.stat.gov.pl/wsdl/terytws1.wsdl";
-    private const WSDL_TEST = "https://uslugaterytws1test.stat.gov.pl/wsdl/terytws1.wsdl";
+    private const string WSDL_PROD = "https://uslugaterytws1.stat.gov.pl/wsdl/terytws1.wsdl";
+    private const string WSDL_TEST = "https://uslugaterytws1test.stat.gov.pl/wsdl/terytws1.wsdl";
 
     /**
      * Creates an instance of TerytSoapApi for given DSN

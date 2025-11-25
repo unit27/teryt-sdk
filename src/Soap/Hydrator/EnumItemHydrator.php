@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 namespace Goosfraba\Teryt\Soap\Hydrator;
 
@@ -8,7 +8,7 @@ use Webit\SoapApi\Hydrator\Hydrator;
 
 final class EnumItemHydrator implements Hydrator
 {
-    public function hydrateResult($result, $soapFunction)
+    public function hydrateResult($result, $soapFunction): array
     {
         $resultKey = $soapFunction . 'Result';
         $result = @$result->{$resultKey};

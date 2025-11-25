@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 namespace Goosfraba\Teryt\Soap\Executor;
 
@@ -7,7 +7,7 @@ use Webit\SoapApi\Executor\SoapApiExecutor;
 
 final class ActionAddingExecutor implements SoapApiExecutor
 {
-    private const ACTION_PREFIX = "http://tempuri.org/ITerytWs1/";
+    private const string ACTION_PREFIX = "http://tempuri.org/ITerytWs1/";
 
     private SoapApiExecutor $innerExecutor;
 

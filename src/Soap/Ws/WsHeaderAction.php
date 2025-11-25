@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 namespace Goosfraba\Teryt\Soap\Ws;
 
@@ -7,7 +7,7 @@ namespace Goosfraba\Teryt\Soap\Ws;
  */
 final class WsHeaderAction
 {
-    private const WSA_NAMESPACE = 'http://www.w3.org/2005/08/addressing';
+    private const string WSA_NAMESPACE = 'http://www.w3.org/2005/08/addressing';
 
     private string $action;
 

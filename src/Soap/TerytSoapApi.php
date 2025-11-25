@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 namespace Goosfraba\Teryt\Soap;
 
@@ -77,7 +77,7 @@ final class TerytSoapApi implements TerytApi
     /**
      * @inheritDoc
      */
-    public function PobierzKatalogTERC(\DateTimeInterface $stateAt = null): CatalogFile
+    public function PobierzKatalogTERC(?\DateTimeInterface $stateAt = null): CatalogFile
     {
         return $this->executor->executeSoapFunction(
             TerytSoapFunctions::POBIERZ_KATALOG_TERC,
@@ -88,7 +88,7 @@ final class TerytSoapApi implements TerytApi
     /**
      * @inheritDoc
      */
-    public function PobierzKatalogTERCAdr(\DateTimeInterface $stateAt = null): CatalogFile
+    public function PobierzKatalogTERCAdr(?\DateTimeInterface $stateAt = null): CatalogFile
     {
         return $this->executor->executeSoapFunction(
             TerytSoapFunctions::POBIERZ_KATALOG_TERC_ADR,
@@ -99,7 +99,7 @@ final class TerytSoapApi implements TerytApi
     /**
      * @inheritDoc
      */
-    public function PobierzKatalogNTS(\DateTimeInterface $stateAt = null): CatalogFile
+    public function PobierzKatalogNTS(?\DateTimeInterface $stateAt = null): CatalogFile
     {
         return $this->executor->executeSoapFunction(
             TerytSoapFunctions::POBIERZ_KATALOG_NTS,
@@ -110,7 +110,7 @@ final class TerytSoapApi implements TerytApi
     /**
      * @inheritDoc
      */
-    public function PobierzKatalogSIMCAdr(\DateTimeInterface $stateAt = null): CatalogFile
+    public function PobierzKatalogSIMCAdr(?\DateTimeInterface $stateAt = null): CatalogFile
     {
         return $this->executor->executeSoapFunction(
             TerytSoapFunctions::POBIERZ_KATALOG_SIMC_ADR,
@@ -121,7 +121,7 @@ final class TerytSoapApi implements TerytApi
     /**
      * @inheritDoc
      */
-    public function PobierzKatalogSIMC(\DateTimeInterface $stateAt = null): CatalogFile
+    public function PobierzKatalogSIMC(?\DateTimeInterface $stateAt = null): CatalogFile
     {
         return $this->executor->executeSoapFunction(
             TerytSoapFunctions::POBIERZ_KATALOG_SIMC,
@@ -132,7 +132,7 @@ final class TerytSoapApi implements TerytApi
     /**
      * @inheritDoc
      */
-    public function PobierzKatalogSIMCStat(\DateTimeInterface $stateAt = null): CatalogFile
+    public function PobierzKatalogSIMCStat(?\DateTimeInterface $stateAt = null): CatalogFile
     {
         return $this->executor->executeSoapFunction(
             TerytSoapFunctions::POBIERZ_KATALOG_SIMC_STAT,
@@ -143,7 +143,7 @@ final class TerytSoapApi implements TerytApi
     /**
      * @inheritDoc
      */
-    public function PobierzKatalogULIC(\DateTimeInterface $stateAt = null): CatalogFile
+    public function PobierzKatalogULIC(?\DateTimeInterface $stateAt = null): CatalogFile
     {
         return $this->executor->executeSoapFunction(
             TerytSoapFunctions::POBIERZ_KATALOG_ULIC,
@@ -154,7 +154,7 @@ final class TerytSoapApi implements TerytApi
     /**
      * @inheritDoc
      */
-    public function PobierzKatalogULICAdr(\DateTimeInterface $stateAt = null): CatalogFile
+    public function PobierzKatalogULICAdr(?\DateTimeInterface $stateAt = null): CatalogFile
     {
         return $this->executor->executeSoapFunction(
             TerytSoapFunctions::POBIERZ_KATALOG_ULIC_ADR,
@@ -165,7 +165,7 @@ final class TerytSoapApi implements TerytApi
     /**
      * @inheritDoc
      */
-    public function PobierzKatalogULICBezDzielnic(\DateTimeInterface $stateAt = null): CatalogFile
+    public function PobierzKatalogULICBezDzielnic(?\DateTimeInterface $stateAt = null): CatalogFile
     {
         return $this->executor->executeSoapFunction(
             TerytSoapFunctions::POBIERZ_KATALOG_ULIC_BEZ_DZIELNIC,
@@ -176,7 +176,7 @@ final class TerytSoapApi implements TerytApi
     /**
      * @inheritDoc
      */
-    public function PobierzKatalogWMRODZ(\DateTimeInterface $stateAt = null): CatalogFile
+    public function PobierzKatalogWMRODZ(?\DateTimeInterface $stateAt = null): CatalogFile
     {
         return $this->executor->executeSoapFunction(
             TerytSoapFunctions::POBIERZ_KATALOG_WMRODZ,

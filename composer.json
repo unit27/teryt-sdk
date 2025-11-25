@@ -5,7 +5,7 @@
     "keywords": ["gus", "teryt", "terc", "simc", "ulic"],
     "license": "MIT",
     "require": {
-        "php": ">=7.4",
+        "php": "^8.4",
         "ext-soap": "*",
         "webit/soap-api": "^3.0",
         "wsdltophp/wssecurity": "^2.0"
