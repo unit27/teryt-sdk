@@ -7,7 +7,7 @@
     "require": {
         "php": "^8.4",
         "ext-soap": "*",
-        "webit/soap-api": "^3.0",
+        "unit27/soap-api": "^3.0",
         "wsdltophp/wssecurity": "^2.0"
     },
     "require-dev": {
